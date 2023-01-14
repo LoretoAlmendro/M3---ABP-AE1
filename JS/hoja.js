@@ -23,3 +23,17 @@ var images = ["https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Arica01
               ,"https://upload.wikimedia.org/wikipedia/commons/9/93/San_Quintin_Glacier_1.jpg",
               "https://upload.wikimedia.org/wikipedia/commons/c/cd/Puerto_Williams1.JPG"];
             
+
+function Region (valor) {
+    let show = document.getElementById ("caja")
+    show.style.display= "flex"
+    show.style.justifyContent= "center"
+
+document.getElementById("pictures").setAttribute("src", images[valor]);
+document.getElementById("nombreregion").innerText = "Región: " + region[valor];
+document.getElementById("informacion").innerText = "Atractivos: " + atractivos[valor];
+}
+
+function Regionfuera() {
+document.getElementById("caja").style.display = "none";
+} 

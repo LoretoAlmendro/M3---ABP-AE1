@@ -7,44 +7,29 @@
   <title>M3 - ABP AE1</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <style>
-    #figuras {
-      list-style: none;
-    }
-
-    
-    .arriba {
-      transform: scale(1.2);
-    }
-
-    .abajo {
-      transform: scale(0.8);
-    }
-    .borde{
-      border: 1px solid red;
-    }
-  </style>
+  <link rel="stylesheet" href="Css/style.css">
 </head>
 
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
   <div class="text-center">
-    <map name="mapa" class="figuras">
-      <area shape="circle" coords="40,100,15" href=""  />
-      <area shape="circle" coords="90,100,15" href="" />
-      <area shape="rectangle" coords="150,50,230,130" href="" />
-      <area shape="rectangle" coords="270,50,390,150" href="" />
-      <area shape="rectangle" coords="400,100,490,160" href="" />
-      <area shape="circle" coords="510,140,20" href="" />
-      <area shape="circle" coords="550,130,20" href="" />
-      <area shape="circle" coords="580,140,20" href="" />
-      <area shape="circle" coords="620,160,20" href="" />
-      <area shape="circle" coords="660,170,15" href="" />
-      <area shape="circle" coords="695,170,15" href="" />
-      <area shape="circle" coords="750,180,30" href="" />
-      <area shape="circle" coords="800,190,15" href="" />
-      <area shape="rectangle" coords="825,175,925,215" href="" />
-      <area shape="rectangle" coords="950,175,1155,255" href="" />
+    <map name="mapa">
+      <area onmouseover="Region(0)" onmouseout="Regionfuera ()" shape="circle" coords="40,100,15" href="" />
+      <area onmouseover="Region(1)" onmouseout="Regionfuera ()"shape="circle" coords="90,100,15" href="" />
+      <area onmousemove="Region(2)" onmouseout="Regionfuera ()"shape="rectangle" coords="150,50,230,130" href="" />
+      <area onmouseover="Region (3)" onmouseout="Regionfuera ()"shape="rectangle" coords="270,50,390,150" href="" />
+      <area onmouseover="Region (4)" onmouseout="Regionfuera ()"shape="rectangle" coords="400,100,490,160" href="" />
+      <area onmouseover="Region (5)" onmouseout="Regionfuera ()"shape="circle" coords="510,140,20" href="" />
+      <area onmouseover="Region (6)" onmouseout="Regionfuera ()"shape="circle" coords="550,130,20" href="" />
+      <area onmouseover="Region (7)" onmouseout="Regionfuera ()"shape="circle" coords="580,140,20" href="" />
+      <area onmouseover="Region (8)" onmouseout="Regionfuera ()"shape="circle" coords="620,160,20" href="" />
+      <area onmouseover="Region (9)" onmouseout="Regionfuera ()"shape="circle" coords="660,170,15" href="" />
+      <area onmouseover="Region (10)" onmouseout="Regionfuera ()"shape="circle" coords="695,170,15" href="" />
+      <area onmouseover="Region(11)" onmouseout="Regionfuera ()"shape="circle" coords="750,180,30" href="" />
+      <area onmouseover="Region (12)" onmouseout="Regionfuera ()"shape="circle" coords="800,190,15" href="" />
+      <area onmouseover="Region (13)" onmouseout="Regionfuera ()"shape="rectangle" coords="825,175,925,215" href="" />
+      <area onmouseover="Region (14)" onmouseout="Regionfuera ()"shape="rectangle" coords="950,175,1155,255" href="" />
+      <area onmouseover="Region (15)" onmouseout="Regionfuera ()"shape="rectangle" coords="1180,125,1450,255" href="" />
       <area shape="rectangle" coords="1180,125,1450,255" href="" />
     </map>
     </map>
@@ -53,13 +38,13 @@
 
 
 
-  <div class="container text-center">
+  <div id="caja" class="container text-center">
 
     <div class="card">
-      <img src="..." class="card-img-top shadow" alt="...">
+      <img id=pictures src="..." class="card-img-top shadow" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Región:</h5>
-        <p class="card-text" id="atractivos">Atractivos: </p>
+        <h5 id= "nombreregion" class= "card-title">Región:</h5>
+        <p id="informacion" class="card-text" id="atractivos">Atractivos: </p>
       </div>
     </div>
   </div>
@@ -69,11 +54,11 @@
 </body>
 
 
+<script src="JS/hoja.js"></script>
 
-
-<script>
+<!-- <script>
   $("area").hover(function () {
     $(this).toggleClass('arriba').siblings().toggleClass('abajo')
-  })</script>
+  })</script> -->
 
 </html>

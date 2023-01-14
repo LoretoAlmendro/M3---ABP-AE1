@@ -13,3 +13,6 @@
   .borde{
     border: 1px solid red;
   }
+
+ .container{
+    display: none;}
